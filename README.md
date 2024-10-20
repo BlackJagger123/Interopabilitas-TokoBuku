@@ -7,60 +7,71 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# II. Persiapan
+### 1. Instalasi Laravel 11
+![1](https://github.com/user-attachments/assets/c1d6b853-4c3e-4999-98d8-8f99fed719d4)
+### 2. Konfigurasi Database
+![db](https://github.com/user-attachments/assets/26166ed8-2342-4bbf-a5c5-e5b5b3797115)
+# III. Membuat API CRUD untuk Sistem Toko Buku
+### 1. Membuat Migration dan Model
+> Buat migration dan model untuk Kategori dan Buku
+![2](https://github.com/user-attachments/assets/37b9355f-7720-43fb-98db-163d2a212aa8)
+![3](https://github.com/user-attachments/assets/afa32741-dedf-41ae-a9ab-cc17ae3ad034)
+> Edit file migration `create_kategoris_table.php`:
+![4](https://github.com/user-attachments/assets/a3804506-84db-4aa2-8a2d-ef098ca7e85a)
+> Edit file migration `create_bukus_table.php`:
+![5](https://github.com/user-attachments/assets/c9f150a2-43cd-43f5-9fb2-b86b18e9ee46)
+### 2. Membuat Controller API untuk Kategori dan Buku
+> Buat controller untuk Kategori dan Buku:
+![6](https://github.com/user-attachments/assets/eaab5917-a752-4974-b7e1-75996f6b13c7)
+> Isi file `KategoriController.php`:
+![7](https://github.com/user-attachments/assets/32405f87-cf88-42bb-84f6-5d773d252065)
+> Jalankan perintah berikut untuk melakukan migrasi:
+![migrate](https://github.com/user-attachments/assets/fc8d48c6-139c-4449-96c1-650913bbb44f)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# IV. Testing API dengan Postman
+> 1. Jalankan server Laravel:
+![9](https://github.com/user-attachments/assets/c55ba7c4-338a-42e0-a58f-cdaf9ed7fab1)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> 2. Testing endpoint menggunakan Postman:
+> A.	GET http://localhost:8000/api/kategoris
+![GET K](https://github.com/user-attachments/assets/76dc1b19-dd49-438f-9aa1-0eda3ae467f4)
+> B. POST http://localhost:8000/api/kategoris
+![POST K](https://github.com/user-attachments/assets/09eaf2cb-2cc3-4204-b2eb-03649e4688f2)
+> C. GET http://localhost:8000/api/bukus
+![GET B](https://github.com/user-attachments/assets/c0a815d2-927a-48c1-b1af-de6c5b464bd4)
+> D. POST http://localhost:8000/api/bukus
+![POST B](https://github.com/user-attachments/assets/36c90d50-0d49-44a8-85a8-af2465d078cc)
+> E. GET http://localhost:8000/api/bukus/1
+![GET B1](https://github.com/user-attachments/assets/71134954-b171-448b-9528-dbf152eb6061)
+> F. PUT http://localhost:8000/api/bukus/1
+![PUT B](https://github.com/user-attachments/assets/e7766fc0-293e-4336-991a-eea5cac37939)
+> G. DELETE http://localhost:8000/api/bukus/1
+![DEL](https://github.com/user-attachments/assets/b42c9529-01c2-4779-bf50-6b796485562e)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tugas Mahasiswa
+1.	Tambahkan Validasi:
+o	Nama buku tidak boleh kosong.
+o	Harga minimal Rp 1.000.
+![Validasi 2](https://github.com/user-attachments/assets/4d18f3b2-bdf7-4d49-9ce6-ea73e475fdcf)
 
-## Learning Laravel
+2.	Rancang Endpoint Baru:
+Buatlah satu endpoint tambahan untuk sistem toko buku, misalnya, endpoint untuk mencari buku berdasarkan kategori atau judul. Tantangan: Apa pertimbangan yang harus Anda buat saat merancang endpoint ini? Pertimbangkan aspek performa, skalabilitas, dan pengalaman pengguna.
+![Validasi 1](https://github.com/user-attachments/assets/a4413bae-6c7d-4166-a7d5-82f5a3bde78c)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4.	Uji API Secara Publik:
+o	Gunakan ngrok atau sejenisnya untuk membuka API ke internet.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
