@@ -59,8 +59,13 @@ o	Harga minimal Rp 1.000.
 Buatlah satu endpoint tambahan untuk sistem toko buku, misalnya, endpoint untuk mencari buku berdasarkan kategori atau judul. Tantangan: Apa pertimbangan yang harus Anda buat saat merancang endpoint ini? Pertimbangkan aspek performa, skalabilitas, dan pengalaman pengguna.
 ![Validasi 1](https://github.com/user-attachments/assets/a4413bae-6c7d-4166-a7d5-82f5a3bde78c)
 
-4.	Uji API Secara Publik:
+3.	Uji API Secara Publik:
 o	Gunakan ngrok atau sejenisnya untuk membuka API ke internet.
+https://sj2qcddp-8000.asse.devtunnels.ms/
+![90](https://github.com/user-attachments/assets/f79adf03-4228-45fc-b550-410107e23941)
+![55](https://github.com/user-attachments/assets/84e94bc6-726d-48e5-80cd-57d25a1eb979)
+
+
 
 
 
